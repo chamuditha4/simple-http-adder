@@ -1,0 +1,23 @@
+<html>
+<body>
+<script>
+    function gen(){
+		var prefix = 'http://';
+        var textArea = document.getElementById("my-text-area");
+        var arrayOfLines = textArea.value.split("\n");
+		var newArr = arrayOfLines.map(el => prefix + el);
+		var textarea = document.getElementById("demo");
+		textarea.value = newArr.join("\n");
+    }
+</script>    
+<textarea id="my-text-area" name="text_before" rows="4" cols="50">
+</textarea><br></br>
+
+<button type="button"
+onclick="gen()">
+Convert</button><br></br>
+
+<textarea id="demo" name="text_after" rows="4" cols="50">
+</textarea><br></br>
+</body>
+</html>
